@@ -11,8 +11,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}", "./src/components/**/*.{js, ts, jsx, tsx}"],
   theme: {
     extend: {
+      screens:{
+        xsm: '400px',
+        xxxl: '1800px'
+      },
       backgroundImage:{
         'hero-background': "url('/img/space-background.jpg')"
+      },
+      spacing:{
+        'calc-50-min-150px': 'calc(50% - 150px)',
+        'calc-75-min-150px': 'calc(75% - 150px)'
       },
       keyframes: {
         fadeInUp: {
