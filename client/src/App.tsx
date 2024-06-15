@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import HeroSection from "./component/Hero"
 import AboutMe from "./component/AboutMe";
+import Projects from "./component/Project";
+import Contact from "./component/Contact";
 
 function App() {
 
@@ -9,9 +11,8 @@ function App() {
       <HeroSection />
       <main className="w-full " >
         <AboutMe />
-        <div className="aaa h-[150vh]">
-
-        </div>
+        <Projects />
+        <Contact />
       </main>
     </>
   )

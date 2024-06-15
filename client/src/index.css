@@ -11,13 +11,20 @@
     *{
         @apply text-default
     }
-
     .skill, .tool{
         @apply font-raleway font-normal text-base backdrop-blur-lg bg-gradient-to-tl from-transparent via-[rgba(11,17,33,0.28)] to-transparent rounded-md py-2 px-6 pointer-events-none lg:text-lg
     }
 }
 
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Slow transition for background and text color */
+    -webkit-text-fill-color: #b3b8c4 !important; /* Set your preferred text color */
+    box-shadow: 0 0 0px 1000px transparent inset; /* 'Fakes' a transparent background */
+}
 
 html{
     height: 100%;
@@ -39,14 +46,19 @@ body{
 .about-me-section{
     min-height: 100vh;
     background: rgb(0,0,0);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 15%, rgba(6,25,55,1) 40%, #283b5d 100%);
     background: linear-gradient(180deg, rgba(0,0,0,1) 15%, rgba(6,25,55,1) 40%, rgb(40, 59, 93) 100%);
 }
 
 .hero-section{
     min-height: 100vh;
-    background: url('/img/hero-background.jpeg') center/cover no-repeat,  linear-gradient(275deg, rgb(0, 0, 0) 0%, rgb(56, 68, 86) 46%, rgb(0, 0, 0) 100%);
+    background: url('/img/hero-background.jpeg') center/cover no-repeat,  linear-gradient(275deg, rgb(0, 0, 0) 0%, #384456 46%, rgb(0, 0, 0) 100%);
     background-blend-mode: multiply;
     margin-bottom: -15px;
+}
+
+.projects-section{
+    background: rgb(40, 59, 93);
 }
 
 ul{ 
@@ -91,3 +103,10 @@ ul{
     opacity: 1;
     transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
+
+.contact-section{
+    background: #3f4c6b;
+    background: -webkit-linear-gradient(0deg, #3f4c6b 0%, #3f4c6b 50%, #283b5d 100%);
+    background: linear-gradient(0deg, #3f4c6b 0%, #3f4c6b 50%, #283b5d 100%);
+}
+

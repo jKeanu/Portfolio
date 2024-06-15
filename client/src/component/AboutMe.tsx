@@ -52,7 +52,7 @@ const AboutMe:React.FC=()=>{
                         <div className='skill'>Mongoose</div>
                         <div className='skill'>Redis</div>
                         <div className='skill'>REST API</div>
-                        <div className='skill'>GIT</div>
+                        <div className='skill'>Git</div>
                         <div className='skill'>S3</div>
                     </div>
                 </div>
