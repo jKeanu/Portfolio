@@ -67,6 +67,12 @@ ul{
     margin: 0;
 }
 
+.socials-list li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-link-container{
     position: relative;
 }

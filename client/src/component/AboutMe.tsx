@@ -4,19 +4,17 @@ import { useEffect } from 'react';
 
 const AboutMe:React.FC=()=>{
 
-
     useEffect(() => {
         // Initialize AOS
         AOS.init({
           duration: 2000,  // values from 0 to 3000, with step 50ms
           once: true,  // whether animation should happen only once - while scrolling down
         });
-    
         // This function will run when the component unmounts
         return () => {
           AOS.refresh();
         };
-      }, []);
+    }, []);
     
     return(
         <section className="about-me-section px-16 md:px-32 pt-32">
