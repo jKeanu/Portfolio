@@ -1,6 +1,7 @@
 const Footer:React.FC=()=>{
     return(
         <footer className="w-screen h-[30vh] bg-black">
+            
             <div className="socials-container">
                 <h2 className="mb-2 font-bold font-raleway text-xl lg:text-2xl">Social</h2>
                 <ul className="socials-list flex">
