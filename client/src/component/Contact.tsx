@@ -1,7 +1,9 @@
 import React, { ChangeEvent, useState } from "react"
+import useAOS from "../customHooks/useAOS"
 
 const Contact:React.FC=()=>{
     const [formData, setFormData] = useState({name:"", email:"", message:""})
+    useAOS()
 
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLTextAreaElement>)=>{
         e.preventDefault()
@@ -19,9 +21,9 @@ const Contact:React.FC=()=>{
     }
 
     return (
-        <section className="contact-section pt-32 min-h-[100vh]">
-            <h2 className="mb-12 font-bold font-raleway text-center text-3xl lg:text-4xl">Contact</h2>
-            <form className="contact-form flex flex-col items-center w-[300px] xsm:w-[350px] sm:w-[650px] sm:p-12 p-4 rounded-md mx-auto lg:w-[950px]" onSubmit={handleSubmit}>
+        <section className="contact-section bg-[#090e22]">
+            <h2 className="mb-12 font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Contact</h2>
+            <form className="contact-form flex flex-col items-center w-[250px] xsm:w-[300px] sm:w-[500px] md:w-[650px] lg:w-[850px] xl:[950px] sm:p-12 p-4 rounded-md mx-auto" onSubmit={handleSubmit}>
                 <div className="w-[100%] flex gap-x-4 lg:flex-row flex-col">
                     <div className="w-[100%]">
                         <label htmlFor="name" className="block text-default font-raleway my-2 text-xl">Name</label>

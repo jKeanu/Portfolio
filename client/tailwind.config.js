@@ -19,8 +19,8 @@ export default {
         'hero-background': "url('/img/space-background.jpg')"
       },
       spacing:{
-        'calc-50-min-150px': 'calc(50% - 150px)',
-        'calc-75-min-150px': 'calc(75% - 150px)'
+        'calc-50-min-150px': 'calc(50% - 75px)',
+        'calc-75-min-150px': 'calc(75% - 112px)'
       },
       keyframes: {
         fadeInUp: {

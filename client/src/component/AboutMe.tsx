@@ -1,23 +1,12 @@
-import AOS from 'aos'
 import 'aos/dist/aos.css';  // Import the CSS
-import { useEffect } from 'react';
+import useAOS from '../customHooks/useAOS';
 
 const AboutMe:React.FC=()=>{
-
-    useEffect(() => {
-        // Initialize AOS
-        AOS.init({
-          duration: 2000,  // values from 0 to 3000, with step 50ms
-          once: true,  // whether animation should happen only once - while scrolling down
-        });
-        // This function will run when the component unmounts
-        return () => {
-          AOS.refresh();
-        };
-    }, []);
     
+    useAOS()
+
     return(
-        <section className="about-me-section px-16 md:px-32 pt-32">
+        <section className="about-me-section bg-[#0b0f2f]">
             <h2 className="mb-12 font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">About</h2>
             <div className="about-me-container">
                 <div className="about-me-info-container flex justify-center lg:justify-between flex-wrap lg:flex-nowrap lg:gap-x-12 lg:gap-y-0 gap-y-10">

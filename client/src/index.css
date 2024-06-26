@@ -5,61 +5,110 @@
 @tailwind utilities;
 
 @layer base{
+    *{
+        @apply text-default font-raleway
+    }
+    section{
+        @apply px-7 lg:px-24 md:px-16 xsm:px-12 min-h-[100vh]
+    }
+    h2{
+        @apply pt-20
+    }
+    h4{
+        @apply font-semibold lg:text-base text-sm
+    }
+    html{
+        @apply h-[100%] overflow-x-auto scroll-smooth
+    }
+    body{
+        @apply scroll-smooth
+    }
+}
+
+
+@layer components{
     .nav-link{
         @apply font-normal font-raleway text-lg cursor-pointer h-[100%] xsm:text-xl
-    }
-    *{
-        @apply text-default
     }
     .skill, .tool{
         @apply font-raleway font-normal text-base backdrop-blur-lg bg-gradient-to-tl from-transparent via-[rgba(11,17,33,0.28)] to-transparent rounded-md py-2 px-6 pointer-events-none lg:text-lg
     }
-}
 
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Slow transition for background and text color */
-    -webkit-text-fill-color: #b3b8c4 !important; /* Set your preferred text color */
-    box-shadow: 0 0 0px 1000px transparent inset; /* 'Fakes' a transparent background */
-}
+    /*Projects Section*/
+    .project-technologies-list div{
+        @apply p-[5px] lg:p-[6px] bg-[#20232b] rounded-md text-[11px] 
+    }
+    .project-list{
+        @apply flex lg:gap-x-14 lg:gap-y-14 gap-x-10 gap-y-10 justify-center flex-wrap
+    }
+    .project-container{
+        @apply lg:w-[350px] lg:h-[455px] xl:w-[400px] xl:h-[520px] w-[325px] h-[423px]
+    }
+    .project{
+        @apply flex h-full shadow-lg shadow-[#fff] flex-col
+    }
+    .project-image{
+        @apply w-full h-[275px]
+    }
+    .project-header{
+        @apply lg:text-2xl text-xl font-semibold
+    }
+    .project-details{
+        @apply flex flex-col w-full justify-between xl:p-5 p-3 gap-y-2 
+    }
+    .project-details p{
+        @apply lg:text-base text-sm
+    }
+    .project-technologies-list{
+        @apply flex flex-wrap gap-x-2 gap-y-2
+    }
 
-html{
-    height: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth
-}
+    /*Contact Section*/
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Slow transition for background and text color */
+        -webkit-text-fill-color: #b3b8c4 !important; /* Set your preferred text color */
+        box-shadow: 0 0 0px 1000px transparent inset; /* 'Fakes' a transparent background */
+}}
 
-body{
-    scroll-behavior: smooth
-}
 
-*{
-    box-sizing: border-box;
-    border: none;
-    padding: 0;
+* {
     margin: 0;
-}
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border do not add to the total width and height */
+    border: none
+  }
 
-.about-me-section{
-    min-height: 100vh;
-    background: rgb(0,0,0);
-    background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 15%, rgba(6,25,55,1) 40%, #283b5d 100%);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 15%, rgba(6,25,55,1) 40%, rgb(40, 59, 93) 100%);
-}
 
 .hero-section{
     min-height: 100vh;
-    background: url('/img/hero-background.jpeg') center/cover no-repeat,  linear-gradient(275deg, rgb(0, 0, 0) 0%, #384456 46%, rgb(0, 0, 0) 100%);
-    background-blend-mode: multiply;
-    margin-bottom: -15px;
+    background: url('/img/hero-background.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
 
-.projects-section{
-    background: rgb(40, 59, 93);
+
+.about-me-section{
+    min-height: 100vh;
+    background: url('/img/about-me-background.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
+
+
+.projects-section{
+    background: url('/img/project-background.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+
 
 ul{ 
     list-style-type: none;
@@ -108,11 +157,5 @@ ul{
 .nav-link:hover::after{
     opacity: 1;
     transform: translateX(-50%) translateY(-50%) scale(1.3);
-}
-
-.contact-section{
-    background: #3f4c6b;
-    background: -webkit-linear-gradient(0deg, #3f4c6b 0%, #3f4c6b 50%, #283b5d 100%);
-    background: linear-gradient(0deg, #3f4c6b 0%, #3f4c6b 50%, #283b5d 100%);
 }
 
