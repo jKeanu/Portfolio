@@ -1,6 +1,6 @@
 import express from 'express'
 import rateLimit from 'express-rate-limit';
-import * as projectController from '../controllers/projectController'
+import * as projectController from '../controllers/projectController.js'
 
 
 const router = express.Router()

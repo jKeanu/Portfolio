@@ -1,8 +1,11 @@
 import React, { ChangeEvent, useState } from "react"
 import useAOS from "../customHooks/useAOS"
+import axios, { AxiosResponse } from "axios"
 
 const Contact:React.FC=()=>{
     const [formData, setFormData] = useState({name:"", email:"", message:""})
+    const [messageStatus, setMessageStatus] = useState<string>('')
+    const API_URL = import.meta.env.MODE === 'production'? import.meta.env.VITE_API_URL_PROD : import.meta.env.VITE_API_URL_DEV;
     useAOS()
 
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLTextAreaElement>)=>{
@@ -16,8 +19,16 @@ const Contact:React.FC=()=>{
         })
     }
 
-    const handleSubmit = (e:React.FormEvent<HTMLFormElement>)=>{
+    const handleSubmit = async (e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
+        try{
+            const res:AxiosResponse<{status:string}> = await axios.post(`${API_URL}/contact`)
+            if(res.data.status==='success'){
+                setMessageStatus('Your message was successfully sent')
+            }
+        }catch(err){
+            
+        }
     }
 
     return (

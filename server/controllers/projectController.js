@@ -1,5 +1,5 @@
-import Project from "../models/projectModel";
-import catchAsync from "../utils/catchAsync";
+import Project from "../models/projectModel.js";
+import catchAsync from "../utils/catchAsync.js";
 
 export const getFirstSix = catchAsync(async (req, res, next)=>{
     const projects = await Project.find({})
