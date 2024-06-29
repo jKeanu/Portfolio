@@ -4,9 +4,9 @@ const Projects:React.FC=()=>{
 
     useAOS()
     return (
-        <section className="projects-section">
-            <h2 className="mb-12 font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Projects</h2>
-            <div className="project-list-container">
+        <section className="projects-section pb-10" id="projects">
+            <h2 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Projects</h2>
+            <div className="project-list-container py-10">
                 <ul className="project-list">
                     <li className="project-container">
                         <a className="project">
@@ -23,7 +23,7 @@ const Projects:React.FC=()=>{
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
-                                <div className="flex flex-col w-full">
+                                <div className="made-with flex flex-col w-full">
                                     <h4>Made with</h4>
                                     <div className="project-technologies-list">
                                         <div>React</div>
@@ -57,7 +57,7 @@ const Projects:React.FC=()=>{
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
-                                <div className="flex flex-col w-full">
+                                <div className="made-with flex flex-col w-full">
                                     <h4>Made with</h4>
                                     <div className="project-technologies-list">
                                         <div>React</div>
@@ -91,7 +91,7 @@ const Projects:React.FC=()=>{
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
-                                <div className="flex flex-col w-full">
+                                <div className="made-with flex flex-col w-full">
                                     <h4>Made with</h4>
                                     <div className="project-technologies-list">
                                         <div>React</div>
@@ -125,7 +125,7 @@ const Projects:React.FC=()=>{
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
-                                <div className="flex flex-col w-full">
+                                <div className="made-with flex flex-col w-full">
                                     <h4>Made with</h4>
                                     <div className="project-technologies-list">
                                         <div>React</div>
@@ -159,7 +159,7 @@ const Projects:React.FC=()=>{
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
-                                <div className="flex flex-col w-full">
+                                <div className="made-with flex flex-col w-full">
                                     <h4>Made with</h4>
                                     <div className="project-technologies-list">
                                         <div>React</div>
@@ -193,7 +193,7 @@ const Projects:React.FC=()=>{
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
-                                <div className="flex flex-col w-full">
+                                <div className="made-with flex flex-col w-full">
                                     <h4>Made with</h4>
                                     <div className="project-technologies-list">
                                         <div>React</div>

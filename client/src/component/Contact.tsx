@@ -32,9 +32,12 @@ const Contact:React.FC=()=>{
     }
 
     return (
-        <section className="contact-section bg-[#090e22]">
-            <h2 className="mb-12 font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Contact</h2>
-            <form className="contact-form flex flex-col items-center w-[250px] xsm:w-[300px] sm:w-[500px] md:w-[650px] lg:w-[850px] xl:[950px] sm:p-12 p-4 rounded-md mx-auto" onSubmit={handleSubmit}>
+        <section className="contact-section bg-[#090e22] flex flex-col h-fit" id="contact">
+            <h2 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Contact</h2>
+                <p className="w-[250px] md:w-[470px] text-center text-base font-light mx-auto text-[#b4b7c3ab]" data-aos="fade-left">
+                    Do you have something in mind or just want to say hello? Feel free to send me a message!
+                </p>
+            <form className="mt-[8vh] contact-form flex flex-col items-center w-[250px] xsm:w-[300px] sm:w-[500px] md:w-[650px] lg:w-[850px] xl:[950px] sm:p-12 p-4 rounded-md mx-auto" onSubmit={handleSubmit}>
                 <div className="w-[100%] flex gap-x-4 lg:flex-row flex-col">
                     <div className="w-[100%]">
                         <label htmlFor="name" className="block text-default font-raleway my-2 text-xl">Name</label>
@@ -60,48 +63,48 @@ const Contact:React.FC=()=>{
                     </textarea>
                 </div>
                 <div className="w-full h-40 flex items-center justify-center cursor-pointer">
-    <div className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 
-    bg-[#24293c3b] group">
-        <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-[#24293c3b] group-hover:h-full">
-        </span>
-        <span
-            className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                fill="none"
-                className="w-5 h-5 stroke-default">
-                <path
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    strokeWidth="2"
-                    strokeLinejoin="round"
-                    strokeLinecap="round">
-                </path>
-            </svg>
-        </span>
-        <span
-            className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            fill="none"
-            className="w-5 h-5 stroke-default">
-                <path
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    strokeWidth="2"
-                    strokeLinejoin="round"
-                    strokeLinecap="round">
-                </path>
-            </svg>
-        </span>
-        <span
-            className="relative w-full text-left transition-colors font-raleway duration-200 ease-in-out text-[#ced4f3]">
-            Launch Message
-        </span>
-        </div>
-    </div>
+                    <button className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 
+                        bg-[#24293c3b] group">
+                        <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-[#0c1b5675] group-hover:h-full">
+                        </span>
+                        <span
+                            className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                fill="none"
+                                className="w-5 h-5 stroke-default">
+                                <path
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                    strokeWidth="2"
+                                    strokeLinejoin="round"
+                                    strokeLinecap="round">
+                                </path>
+                            </svg>
+                        </span>
+                        <span
+                            className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                fill="none"
+                                className="w-5 h-5 stroke-default">
+                                <path
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                    strokeWidth="2"
+                                    strokeLinejoin="round"
+                                    strokeLinecap="round">
+                                </path>
+                            </svg>
+                        </span>
+                        <span
+                            className="relative w-full text-left transition-colors font-raleway duration-200 ease-in-out text-default">
+                            Launch Message
+                        </span>
+                    </button>
+                </div>
             </form>
         </section>
     )

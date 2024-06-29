@@ -1,13 +1,15 @@
 const Footer:React.FC=()=>{
     return(
-        <footer className="w-full h-[30vh] bg-black">
-            
-            <div className="socials-container">
-                <h2 className="mb-2 font-bold font-raleway text-xl lg:text-2xl">Social</h2>
-                <ul className="socials-list flex">
+        <footer className="w-full h-fit bg-[#090e22] sm:px-14  xl:px-80 flex flex-col px-7 lg:px-24 md:px-16 xsm:px-12">
+            <div className="mt-auto w-full border-t-[1px] border-b-0 border-r-0 border-l-0 border-solid border-[#444c68c3] py-6
+                flex justify-between items-center gap-x-2">
+                <p className="lg:text-base sm:text-[14px] text-[13px]">
+                    &copy; 2024 John Keanu Anicete
+                </p>
+                <ul className="socials-list flex gap-x-1">
                     <li>
-                        <a href="">
-                            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a href="" className="social-link">
+                            <svg className="md:h-[50px] md:w-[50px] h-[35px] w-[35px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 
                                 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 
                                 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 
@@ -28,8 +30,8 @@ const Footer:React.FC=()=>{
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jKeanu">
-                        <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <a href="https://github.com/jKeanu" className="social-link">
+                        <svg width="40px" height="40px" className="md:h-[40px] md:w-[40px] w-[30px] h-[30px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <rect width="24" height="24" fill="none"/>
                             <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,
                             5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,

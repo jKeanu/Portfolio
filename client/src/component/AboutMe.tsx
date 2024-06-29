@@ -6,8 +6,8 @@ const AboutMe:React.FC=()=>{
     useAOS()
 
     return(
-        <section className="about-me-section bg-[#0b0f2f]">
-            <h2 className="mb-12 font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">About</h2>
+        <section className="about-me-section bg-[#0b0f2f]" id='about-me'>
+            <h2 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">About</h2>
             <div className="about-me-container">
                 <div className="about-me-info-container flex justify-center lg:justify-between flex-wrap lg:flex-nowrap lg:gap-x-12 lg:gap-y-0 gap-y-10">
                     <div className="my-image-container" data-aos="fade-zoom-in" data-aos-delay="150">
