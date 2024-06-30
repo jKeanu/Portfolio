@@ -17,10 +17,5 @@ router.get('/latest',
     projectController.getFirstSix
 )
 
-router.get('/', 
-    fetchProjectsLimiter,
-    projectController.getProjects)
-
-
 
 export default router

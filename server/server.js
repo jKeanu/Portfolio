@@ -12,8 +12,6 @@ dotenv.config({ path: path.join(__dirname, 'config.env') });
 const server = http.createServer(app);
 
 
-console.log(process.env.DATABASE_PASSWORD, '---')
-
 process.on('uncaughtException', (err) => {
   if(process.env.NODE_ENV !=='production') console.log("UNCAUGHT EXCEPTION ERROR: ", err)
   // logger.error('UNCAUGHT EXCEPTION! Shutting down...', {name:err.name, message:err.message, stack:err.stack})
@@ -28,7 +26,7 @@ if(process.env.NODE_ENV !=='production') console.log('DATABASE ERROR: ', err)
 // logger.error('DB connection error', {name:err.name, message:err.message, stack:err.stack})
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 const httpServer = server.listen(port, () => {
 console.log(`App running on port ${port}...`);

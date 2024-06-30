@@ -1,5 +1,10 @@
 import express from 'express'
 import path from 'path'
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv'
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
+dotenv.config({ path: path.join(__dirname, './config.env') });
 import helmet from 'helmet'
 import morgan from 'morgan'
 import cors from 'cors'
@@ -7,12 +12,7 @@ import mongoSanitize from 'express-mongo-sanitize';
 import xss from 'xss-clean';
 import compression from 'compression';
 import projectRouter from './routes/projectRoutes.js'
-import { fileURLToPath } from 'url';
-import dotenv from 'dotenv'
-const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
-const __dirname = path.dirname(__filename); // get the name of the directory
-dotenv.config({ path: path.join(__dirname, 'config.env') });
-
+import contactRouter from './routes/contactRoutes.js'
 
 const app = express();
 
@@ -69,6 +69,7 @@ app.use(xss());
 app.use(compression());
 
 app.use('/my/projects', projectRouter)
+app.use('/contact', contactRouter)
 
 
 

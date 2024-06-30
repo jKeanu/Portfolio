@@ -21,7 +21,7 @@ const HeroSection = () => {
         <section className="hero-section relative px-0" id="home">
             <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] sm:w-fit w-full"> 
                 <span className="text-default font-raleway xl:text-5xl animate-fadeInUp lg:text-4xl text-3xl sm:inline block text-center">
-                    Hello, I'm <strong className="font-raleway xl:text-6xl lg:text-5xl text-4xl opacity-[55%]">John</strong>.
+                    Hello, I'm <strong className="font-raleway xl:text-6xl lg:text-5xl text-4xl text-[#aac3eb8b]">John</strong>.
                     <br />
                 </span>
                 <span className="text-default font-raleway xl:text-5xl animate-fadeInUp1500 lg:text-4xl text-2xl sm:inline block text-center sm:whitespace-nowrap">

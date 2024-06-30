@@ -1,6 +1,12 @@
 import nodemailer from 'nodemailer'
+import path from 'path'
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv'
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
+dotenv.config({ path: path.join(__dirname, '../config.env') });
 
-export class Email{
+export default class Email{
     constructor(name, email, message){
         this.to = process.env.PERSONAL_EMAIL;
         this.from = `Portfolio <${process.env.EMAIL_FROM}>`
