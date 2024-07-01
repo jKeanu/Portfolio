@@ -1,19 +1,25 @@
 import mongoose from "mongoose";
 
-
 const projectSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true,
         unique: true
     },
-    dateCreated:{
+    startDate:{
         type:Date,
-        required:true,
-        default:Date.now
+        required: true
     },
-    photo:{
+    endDate:{
+        type:Date,
+        required: true
+    },
+    icon:{
         type: String,
+        required: true
+    },
+    photos:{
+        type:[String],
         required: true
     },
     technologies:{

@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react"
 import useAOS from "../customHooks/useAOS"
 import axios, { AxiosResponse } from "axios"
 import MessageStatus from "./messageStatus"
+import { API_URL } from "./Project"
 
 const Contact:React.FC=()=>{
     const [formData, setFormData] = useState({name:"", email:"", message:""})
-    const [messageStatus, setMessageStatus] = useState<{active: boolean, status:string, message:string}>({active:false, status:'success', message:'dsfgsdfgsfg'})
+    const [messageStatus, setMessageStatus] = useState<{active: boolean, status:string, message:string}>({active:false, status:'', message:''})
     const [dots, setDots] = useState(0)
     const [isSending, setIsSending] = useState(false)
-    const maxDots = 3;
-
-    const API_URL = import.meta.env.MODE === 'production'? import.meta.env.VITE_API_URL_PROD : import.meta.env.VITE_API_URL_DEV;
-    useAOS()
+    const maxDots = 3;    useAOS()
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLTextAreaElement>)=>{
         e.preventDefault()
         const {name, value} = e.target
@@ -22,6 +20,21 @@ const Contact:React.FC=()=>{
             }
         })
     }
+
+    useEffect(()=>{
+        let timeoutId: NodeJS.Timeout | undefined;
+        if (messageStatus.active) {
+            timeoutId = setTimeout(() => {
+                setMessageStatus(prevStatus => ({
+                    ...prevStatus,
+                    active: false
+                }));
+            }, 5000);
+            return () => {
+                clearTimeout(timeoutId);
+            };
+        }
+    }, [messageStatus])
 
     useEffect(()=>{
         const interval = setInterval(()=>{
@@ -42,12 +55,11 @@ const Contact:React.FC=()=>{
         }catch(err){
             if(axios.isAxiosError(err)){
                 if(err.response?.status===429){
-                    setMessageStatus({active:true, status:'exceeded', message:"Multiple messages were detected, let's take a quick breather to catch up."})
+                    setMessageStatus({active:true, status:'exceeded', message:"Multiple messages were detected, failed to send the message."})
                 }else{
                     setMessageStatus({active:true, status:'failed', message:'Failed to send the message.'})
                 }
             }else{
-                console.log('asdfjio')
                 setMessageStatus({active:true, status:'failed', message:'Failed to send the message.'})
             }
         }
@@ -56,7 +68,7 @@ const Contact:React.FC=()=>{
 
     return (
         <section className="contact-section bg-[#090e22] flex flex-col h-fit" id="contact">
-            <h2 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Contact</h2>
+            <h1 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Contact</h1>
                 <p className="w-[250px] md:w-[470px] text-center text-base font-light mx-auto text-[#b4b7c3ab]" data-aos="fade-left">
                     Do you have something in mind or just want to say hello? Feel free to send me a message!
                 </p>
@@ -85,9 +97,9 @@ const Contact:React.FC=()=>{
                     onChange={handleChange} style={{borderBottomColor:formData.message?'#b3c1f4d1':''}}>
                     </textarea>
                 </div>
-                <div className="w-full h-40 flex items-center justify-center cursor-pointer">
-                    <button className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 
-                        bg-[#24293c3b] group">
+                <div className="w-full mt-14 flex items-center justify-center">
+                <button className="padding-x-transition relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 
+                        bg-[#24293c3b] group min-w-[185px]" disabled={isSending} style={{pointerEvents:`${isSending?'none':'auto'}`, paddingLeft:`${isSending?'0':''}`, paddingRight:`${isSending?'0':''}`, justifyContent:`${isSending?'center':''}`}}>
                         {!isSending?<>
                             <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-[#0c1b5675] group-hover:h-full">
                             </span>
@@ -129,7 +141,7 @@ const Contact:React.FC=()=>{
                             </span>
                         </>:
                         <span
-                            className="relative w-full text-left transition-colors font-raleway duration-200 ease-in-out text-default">
+                            className="w-fit font-raleway text-default text-center font-bold">
                             Sending{'.'.repeat(dots)}
                         </span>}
 

@@ -1,11 +1,36 @@
+import { useEffect, useState } from "react"
 import useAOS from "../customHooks/useAOS"
+import axios, { AxiosResponse } from "axios"
+import { ProjectDetails } from "../types/types"
+
+export const API_URL = import.meta.env.MODE === 'production'? import.meta.env.VITE_API_URL_PROD : import.meta.env.VITE_API_URL_DEV;
+
 
 const Projects:React.FC=()=>{
 
+    const [projects, setProjects] = useState<ProjectDetails[]>()
     useAOS()
+
+
+    useEffect(()=>{
+        const fetchLatestProjects = async ()=>{
+            try{
+                const res:AxiosResponse<{status:string, data:ProjectDetails[]}> = await axios.get(`${API_URL}/my/projects/latest`)
+                if(res.data.status==='success'){
+                    setProjects(res.data.data)
+                }
+            }catch(err){
+    
+            }
+        }
+        fetchLatestProjects()
+    }, [])
+
+
+
     return (
         <section className="projects-section pb-10" id="projects">
-            <h2 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Projects</h2>
+            <h1 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Projects</h1>
             <div className="project-list-container py-10">
                 <ul className="project-list">
                     <li className="project-container">
@@ -15,16 +40,16 @@ const Projects:React.FC=()=>{
                             </div>
                             <div className="project-details">
                                 <div className="flex flex-col">
-                                    <h3 className="project-header">
+                                    <h2 className="project-header">
                                         Kaiwa
-                                    </h3>
+                                    </h2>
                                     <p>
                                         A chat application that uses modern web technologies, 
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h4>Made with</h4>
+                                    <h3>Made with</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -49,16 +74,16 @@ const Projects:React.FC=()=>{
                             </div>
                             <div className="project-details">
                                 <div className="flex flex-col">
-                                    <h3 className="project-header">
+                                    <h2 className="project-header">
                                         Kaiwa
-                                    </h3>
+                                    </h2>
                                     <p>
                                         A chat application that uses modern web technologies, 
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h4>Made with</h4>
+                                    <h3>Made with</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -83,16 +108,16 @@ const Projects:React.FC=()=>{
                             </div>
                             <div className="project-details">
                                 <div className="flex flex-col">
-                                    <h3 className="project-header">
+                                    <h2 className="project-header">
                                         Kaiwa
-                                    </h3>
+                                    </h2>
                                     <p>
                                         A chat application that uses modern web technologies, 
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h4>Made with</h4>
+                                    <h3>Made with</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -117,16 +142,16 @@ const Projects:React.FC=()=>{
                             </div>
                             <div className="project-details">
                                 <div className="flex flex-col">
-                                    <h3 className="project-header">
+                                    <h2 className="project-header">
                                         Kaiwa
-                                    </h3>
+                                    </h2>
                                     <p>
                                         A chat application that uses modern web technologies, 
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h4>Made with</h4>
+                                    <h3>Made with</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -151,16 +176,16 @@ const Projects:React.FC=()=>{
                             </div>
                             <div className="project-details">
                                 <div className="flex flex-col">
-                                    <h3 className="project-header">
+                                    <h2 className="project-header">
                                         Kaiwa
-                                    </h3>
+                                    </h2>
                                     <p>
                                         A chat application that uses modern web technologies, 
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h4>Made with</h4>
+                                    <h3>Made with</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -185,16 +210,16 @@ const Projects:React.FC=()=>{
                             </div>
                             <div className="project-details">
                                 <div className="flex flex-col">
-                                    <h3 className="project-header">
+                                    <h2 className="project-header">
                                         Kaiwa
-                                    </h3>
+                                    </h2>
                                     <p>
                                         A chat application that uses modern web technologies, 
                                         aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h4>Made with</h4>
+                                    <h3>Made with</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
