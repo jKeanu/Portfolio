@@ -9,7 +9,10 @@ const Contact:React.FC=()=>{
     const [messageStatus, setMessageStatus] = useState<{active: boolean, status:string, message:string}>({active:false, status:'', message:''})
     const [dots, setDots] = useState(0)
     const [isSending, setIsSending] = useState(false)
-    const maxDots = 3;    useAOS()
+    const [notifDisplay, setNotifDisplay] = useState<string>('')
+    const maxDots = 3;    
+
+    useAOS()
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLTextAreaElement>)=>{
         e.preventDefault()
         const {name, value} = e.target
@@ -23,6 +26,7 @@ const Contact:React.FC=()=>{
 
     useEffect(()=>{
         let timeoutId: NodeJS.Timeout | undefined;
+        let displayId: NodeJS.Timeout | undefined;
         if (messageStatus.active) {
             timeoutId = setTimeout(() => {
                 setMessageStatus(prevStatus => ({
@@ -33,6 +37,13 @@ const Contact:React.FC=()=>{
             return () => {
                 clearTimeout(timeoutId);
             };
+        }else if(!messageStatus.active){
+            displayId = setTimeout(()=>{
+                setNotifDisplay('none')
+            }, 350)
+            return ()=>{
+                clearTimeout(displayId)
+            }
         }
     }, [messageStatus])
 
@@ -46,6 +57,7 @@ const Contact:React.FC=()=>{
     const handleSubmit = async (e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
         setIsSending(true)
+        setNotifDisplay('block')
         try{
             const res:AxiosResponse<{status:string}> = await axios.post(`${API_URL}/contact`, formData)
             if(res.data.status==='success'){
@@ -90,7 +102,7 @@ const Contact:React.FC=()=>{
                 </div>
                 <div className="w-[100%]">
                     <label htmlFor="message" className="block text-default font-raleway my-2 text-xl">Message</label>
-                    <textarea id="message" name="message" placeholder="Enter your message..." required className="block font-raleway 
+                    <textarea id="message" name="message" maxLength={350} placeholder="Enter your message..." required className="block font-raleway 
                     resize-none w-[100%] placeholder-default border py-2.5 h-[75px] text-default placeholder:font-raleway outline-none 
                     bg-transparent border-b-2 border-solid focus:border-[#b3c1f4d1] border-[#748fc294] border-t-0 border-l-0 border-r-0
                     text-lg" value={formData.message}
@@ -99,7 +111,7 @@ const Contact:React.FC=()=>{
                 </div>
                 <div className="w-full mt-14 flex items-center justify-center">
                 <button className="padding-x-transition relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 
-                        bg-[#24293c3b] group min-w-[185px]" disabled={isSending} style={{pointerEvents:`${isSending?'none':'auto'}`, paddingLeft:`${isSending?'0':''}`, paddingRight:`${isSending?'0':''}`, justifyContent:`${isSending?'center':''}`}}>
+                        bg-[#24293c3b] group min-w-[185px]" disabled={isSending} style={{pointerEvents:isSending?'none':'auto', paddingLeft:isSending?'0':'', paddingRight:isSending?'0':'', justifyContent:isSending?'center':''}}>
                         {!isSending?<>
                             <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-[#0c1b5675] group-hover:h-full">
                             </span>
@@ -148,7 +160,7 @@ const Contact:React.FC=()=>{
                     </button>
                 </div>
             </form>
-            <MessageStatus msgStatus={messageStatus} />
+            <MessageStatus msgStatus={messageStatus} notifDisplay={notifDisplay}/>
         </section>
     )
 }

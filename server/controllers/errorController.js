@@ -1,4 +1,5 @@
 import AppError from '../utils/appError.js';
+import errorLogger from '../utils/cloudwatch.js';
 
 
 const handleValidationErrorDB = err => {
@@ -27,7 +28,7 @@ const sendErrorProd=(err, req, res)=>{
             message: err.message
         })
     }
-    // logger.error('Uncaught error', {message:err.message, stack:err.stack})
+    errorLogger.error('Uncaught error', {message:err.message, stack:err.stack})
     //This line would execute if there was an unhandled error that we have not caught.
     return res.status(500).json({
         status:'error',

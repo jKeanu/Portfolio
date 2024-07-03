@@ -6,21 +6,26 @@ import { ProjectDetails } from "../types/types"
 export const API_URL = import.meta.env.MODE === 'production'? import.meta.env.VITE_API_URL_PROD : import.meta.env.VITE_API_URL_DEV;
 
 
-const Projects:React.FC=()=>{
-
+const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleLoadScreen})=>{
     const [projects, setProjects] = useState<ProjectDetails[]>()
+    const [isFetching, setIsFetching] = useState<boolean>(true)
     useAOS()
 
+    useEffect(()=>{
+        handleLoadScreen(isFetching)
+    }, [isFetching])
 
     useEffect(()=>{
         const fetchLatestProjects = async ()=>{
+            console.log('asdfasdf')
             try{
                 const res:AxiosResponse<{status:string, data:ProjectDetails[]}> = await axios.get(`${API_URL}/my/projects/latest`)
                 if(res.data.status==='success'){
                     setProjects(res.data.data)
+                    setIsFetching(false)
                 }
             }catch(err){
-    
+                setIsFetching(true)
             }
         }
         fetchLatestProjects()

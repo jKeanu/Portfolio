@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import useAOS from "../customHooks/useAOS";
 const HeroSection = () => {
     const [isSticky, setIsSticky] = useState(false)
-
+    
+    useAOS()
     // this should be run only once per application lifetime
 
     useEffect(() => {

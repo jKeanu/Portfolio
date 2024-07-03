@@ -1,6 +1,7 @@
 import Project from "../models/projectModel.js";
 import catchAsync from "../utils/catchAsync.js";
 
+
 export const getFirstSix = catchAsync(async (req, res, next)=>{
     const projects = await Project.find({})
         .sort({ dateCreated: -1 }) // Sorting by dateCreated in descending order
@@ -20,5 +21,3 @@ export const getProjects = catchAsync(async (req, res, next)=>{
         data: projects
     });
 })
-
-export const createProject = catchAsync()

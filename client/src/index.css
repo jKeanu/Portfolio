@@ -18,9 +18,6 @@
         @apply font-semibold lg:text-[15px] text-sm
     }
     html{
-        @apply h-[100%] overflow-x-auto scroll-smooth
-    }
-    body{
         @apply scroll-smooth
     }
     html::-webkit-scrollbar{
@@ -176,4 +173,8 @@
     .transition-bottom{
         transition: bottom 0.3s ease-in-out;
     }
+    .loading-screen-opacity-transition{
+        transition: opacity 0.5s ease-in-out;
+    }
 }
+
