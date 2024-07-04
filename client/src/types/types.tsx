@@ -5,5 +5,7 @@ export type ProjectDetails={
     iconUrl:string,
     photoUrls:string[],
     technologies: string[],
-    description: string
+    description: string,
+    moreDescription: string,
+    projectLink: string
 }

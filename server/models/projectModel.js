@@ -6,6 +6,11 @@ const projectSchema = new mongoose.Schema({
         required:true,
         unique: true
     },
+    projectLink:{
+        type:String,
+        required:true,
+        unique: true
+    },
     startDate:{
         type:Date,
         required: true
@@ -27,6 +32,11 @@ const projectSchema = new mongoose.Schema({
         required: true,
     },
     description:{
+        type:String,
+        required:true,
+        maxLength: [135, 'Description cannot be longer than 135 characters.']
+    },
+    moreDescription:{
         type:String,
         required:true
     }

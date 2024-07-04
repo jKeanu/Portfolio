@@ -1,7 +1,6 @@
 import winston from 'winston';
 import WinstonCloudWatch from 'winston-cloudwatch'
 
-
 const isProduction = process.env.NODE_ENV === 'production'
 
 const awsCredentials ={
@@ -13,7 +12,7 @@ const awsCredentials ={
   }
   
 
-export const errorLogger = winston.createLogger({
+const errorLogger = winston.createLogger({
 level: 'error',
 format: winston.format.json(),
 transports: [
@@ -28,3 +27,5 @@ transports: [
     new winston.transports.File({ filename: 'error.log'})
 ]
 })
+
+export default errorLogger

@@ -15,7 +15,7 @@
         @apply pt-20 mb-5
     }
     h3{
-        @apply font-semibold lg:text-[15px] text-sm
+        @apply  lg:text-[14px] text-[13px] text-start
     }
     html{
         @apply scroll-smooth
@@ -38,7 +38,10 @@
 }
 
 @layer components{
-    /*Nav*/
+    .loading-screen{
+        z-index: 100;
+    }
+    /*Nav*/    
     .portfolio-nav{
         transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
         background-color: transparent;
@@ -117,22 +120,25 @@
         @apply flex lg:gap-x-14 lg:gap-y-14 gap-x-10 gap-y-10 justify-center flex-wrap
     }
     .project-container{
-        @apply lg:w-[350px] lg:h-[455px] xl:w-[400px] xl:h-[520px] w-[325px] h-[423px]
+        @apply lg:w-[380px] lg:h-[455px] xl:w-[400px] xl:h-[520px] w-[375px] h-[425px]
     }
     .project{
-        @apply flex h-full shadow-lg shadow-[#ffffff3f] flex-col backdrop-blur-sm
+        @apply flex h-full shadow-lg shadow-[#7184bc7d] flex-col backdrop-blur-sm hover:shadow-md hover:shadow-[#7184bc7d]
+    }
+    .project{
+        transition: box-shadow 0.15s ease-in-out;
     }
     .project-image{
-        @apply w-full h-full
+        @apply w-full flex-1
     }
     .project-header{
         @apply lg:text-2xl text-xl font-semibold
     }
     .project-details{
-        @apply flex flex-col w-full justify-between xl:p-5 p-3 gap-y-2 h-fit
-    }
+        @apply flex flex-col w-full justify-between xl:p-5 p-3 h-[200px] xl:h-[245px] lg:h-[210px] md:h-[205px] 
+    } 
     .project-details p{
-        @apply lg:text-base text-sm font-light
+        @apply xl:text-base lg:text-[16px] md:text-sm text-[14px] font-extralight
     }
     .project-technologies-list{
         @apply flex flex-wrap gap-x-2 gap-y-2
@@ -177,4 +183,3 @@
         transition: opacity 0.5s ease-in-out;
     }
 }
-

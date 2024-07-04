@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <LoadingScreen isLoading={isLoading} loadingDisplay={loadingDisplay}/>
+      {/* <LoadingScreen isLoading={isLoading} loadingDisplay={loadingDisplay}/> */}
       <HeroSection />
       <main className="w-full">
         <AboutMe />

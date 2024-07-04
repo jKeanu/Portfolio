@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import useAOS from "../customHooks/useAOS"
 import axios, { AxiosResponse } from "axios"
 import { ProjectDetails } from "../types/types"
+import ProjectModal from "./ProjectModal";
 
 export const API_URL = import.meta.env.MODE === 'production'? import.meta.env.VITE_API_URL_PROD : import.meta.env.VITE_API_URL_DEV;
 
@@ -9,6 +10,7 @@ export const API_URL = import.meta.env.MODE === 'production'? import.meta.env.VI
 const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleLoadScreen})=>{
     const [projects, setProjects] = useState<ProjectDetails[]>()
     const [isFetching, setIsFetching] = useState<boolean>(true)
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(true)
     useAOS()
 
     useEffect(()=>{
@@ -35,13 +37,14 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
 
     return (
         <section className="projects-section pb-10" id="projects">
+            <ProjectModal />
             <h1 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Projects</h1>
             <div className="project-list-container py-10">
                 <ul className="project-list">
                     <li className="project-container">
-                        <a className="project">
+                        <button className="project">
                             <div className="project-image">
-
+                                
                             </div>
                             <div className="project-details">
                                 <div className="flex flex-col">
@@ -54,7 +57,7 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h3>Made with</h3>
+                                    <h3>Built With</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -70,10 +73,10 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </button>
                     </li>
                     <li className="project-container">
-                        <a className="project">
+                        <button className="project">
                             <div className="project-image">
 
                             </div>
@@ -84,11 +87,10 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </h2>
                                     <p>
                                         A chat application that uses modern web technologies, 
-                                        aimed at providing seamless communication and collaboration among users.
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h3>Made with</h3>
+                                    <h3>Built With</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -104,10 +106,10 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </button>
                     </li>
                     <li className="project-container">
-                        <a className="project">
+                        <button className="project">
                             <div className="project-image">
 
                             </div>
@@ -122,7 +124,7 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h3>Made with</h3>
+                                    <h3>Built With</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -138,10 +140,10 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </button>
                     </li>
                     <li className="project-container">
-                        <a className="project">
+                        <button className="project">
                             <div className="project-image">
 
                             </div>
@@ -156,7 +158,7 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h3>Made with</h3>
+                                    <h3>Built With</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -172,10 +174,10 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </button>
                     </li>
                     <li className="project-container">
-                        <a className="project">
+                        <button className="project">
                             <div className="project-image">
 
                             </div>
@@ -190,7 +192,7 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h3>Made with</h3>
+                                    <h3>Built With</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -206,10 +208,10 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </button>
                     </li>
                     <li className="project-container">
-                        <a className="project">
+                        <button className="project">
                             <div className="project-image">
 
                             </div>
@@ -224,7 +226,7 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h3>Made with</h3>
+                                    <h3>Built With</h3>
                                     <div className="project-technologies-list">
                                         <div>React</div>
                                         <div>TypeScript</div>
@@ -240,7 +242,7 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>
