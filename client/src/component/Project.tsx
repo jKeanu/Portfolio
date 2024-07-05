@@ -10,7 +10,6 @@ export const API_URL = import.meta.env.MODE === 'production'? import.meta.env.VI
 const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleLoadScreen})=>{
     const [projects, setProjects] = useState<ProjectDetails[]>()
     const [isFetching, setIsFetching] = useState<boolean>(true)
-    const [isModalOpen, setIsModalOpen] = useState<boolean>(true)
     useAOS()
 
     useEffect(()=>{
@@ -37,12 +36,11 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
 
     return (
         <section className="projects-section pb-10" id="projects">
-            <ProjectModal />
             <h1 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Projects</h1>
             <div className="project-list-container py-10">
                 <ul className="project-list">
                     <li className="project-container">
-                        <button className="project">
+                        <a className="project cursor-pointer">
                             <div className="project-image">
                                 
                             </div>
@@ -73,10 +71,18 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </button>
+                            <div className="visit-website-container flex items-center justify-end px-5 py-2 gap-x-2">
+                                <span className="visit-website-text text-end font-light text-[13px]">
+                                    Visit Website
+                                </span>
+                                <div className="arrow">
+                                    &#8640;
+                                </div>
+                            </div>
+                        </a>
                     </li>
                     <li className="project-container">
-                        <button className="project">
+                        <a className="project cursor-pointer">
                             <div className="project-image">
 
                             </div>
@@ -106,44 +112,18 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </button>
-                    </li>
-                    <li className="project-container">
-                        <button className="project">
-                            <div className="project-image">
-
-                            </div>
-                            <div className="project-details">
-                                <div className="flex flex-col">
-                                    <h2 className="project-header">
-                                        Kaiwa
-                                    </h2>
-                                    <p>
-                                        A chat application that uses modern web technologies, 
-                                        aimed at providing seamless communication and collaboration among users.
-                                    </p>
-                                </div>
-                                <div className="made-with flex flex-col w-full">
-                                    <h3>Built With</h3>
-                                    <div className="project-technologies-list">
-                                        <div>React</div>
-                                        <div>TypeScript</div>
-                                        <div>Sass</div>
-                                        <div>Socket.io</div>
-                                        <div>Express</div>
-                                        <div>MongoDB</div>
-                                        <div>Redis</div>
-                                        <div>S3</div>
-                                        <div>JWT</div>
-                                        <div>Responsive Design</div>
-                                        <div>Mailjet</div>
-                                    </div>
+                            <div className="visit-website-container flex items-center justify-end px-5 py-2 gap-x-2">
+                                <span className="visit-website-text text-end font-light text-[13px]">
+                                    Visit Website
+                                </span>
+                                <div className="arrow">
+                                    &#8640;
                                 </div>
                             </div>
-                        </button>
+                        </a>
                     </li>
                     <li className="project-container">
-                        <button className="project">
+                        <a className="project cursor-pointer">
                             <div className="project-image">
 
                             </div>
@@ -174,10 +154,18 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </button>
+                            <div className="visit-website-container flex items-center justify-end px-5 py-2 gap-x-2">
+                                <span className="visit-website-text text-end font-light text-[13px]">
+                                    Visit Website
+                                </span>
+                                <div className="arrow">
+                                    &#8640;
+                                </div>
+                            </div>
+                        </a>
                     </li>
                     <li className="project-container">
-                        <button className="project">
+                        <a className="project cursor-pointer">
                             <div className="project-image">
 
                             </div>
@@ -208,10 +196,18 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </button>
+                            <div className="visit-website-container flex items-center justify-end px-5 py-2 gap-x-2">
+                                <span className="visit-website-text text-end font-light text-[13px]">
+                                    Visit Website
+                                </span>
+                                <div className="arrow">
+                                   &#8640;
+                                </div>
+                            </div>
+                        </a>
                     </li>
                     <li className="project-container">
-                        <button className="project">
+                        <a className="project cursor-pointer">
                             <div className="project-image">
 
                             </div>
@@ -242,7 +238,57 @@ const Projects:React.FC<{handleLoadScreen:(isFetching:boolean)=>void}>=({handleL
                                     </div>
                                 </div>
                             </div>
-                        </button>
+                            <div className="visit-website-container flex items-center justify-end px-5 py-2 gap-x-2">
+                                <span className="visit-website-text text-end font-light text-[13px]">
+                                    Visit Website
+                                </span>
+                                <div className="arrow">
+                                    &#8640;
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li className="project-container">
+                        <a className="project cursor-pointer">
+                            <div className="project-image">
+
+                            </div>
+                            <div className="project-details">
+                                <div className="flex flex-col">
+                                    <h2 className="project-header">
+                                        Kaiwa
+                                    </h2>
+                                    <p>
+                                        A chat application that uses modern web technologies, 
+                                        aimed at providing seamless communication and collaboration among users.
+                                    </p>
+                                </div>
+                                <div className="made-with flex flex-col w-full">
+                                    <h3>Built With</h3>
+                                    <div className="project-technologies-list">
+                                        <div>React</div>
+                                        <div>TypeScript</div>
+                                        <div>Sass</div>
+                                        <div>Socket.io</div>
+                                        <div>Express</div>
+                                        <div>MongoDB</div>
+                                        <div>Redis</div>
+                                        <div>S3</div>
+                                        <div>JWT</div>
+                                        <div>Responsive Design</div>
+                                        <div>Mailjet</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="visit-website-container flex items-center justify-end px-5 py-2 gap-x-2">
+                                <span className="visit-website-text text-end font-light text-[13px]">
+                                    Visit Website
+                                </span>
+                                <div className="arrow">
+                                    &#8640;
+                                </div>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>

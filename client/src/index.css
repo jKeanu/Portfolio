@@ -4,6 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@keyframes arrow-movement {
+    0% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(5px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+  }
+
+
 @layer base{
     *{
         @apply text-default font-raleway m-0 p-0 box-border border-none
@@ -132,10 +147,10 @@
         @apply w-full flex-1
     }
     .project-header{
-        @apply lg:text-2xl text-xl font-semibold
+        @apply lg:text-2xl text-xl font-semibold text-center
     }
     .project-details{
-        @apply flex flex-col w-full justify-between xl:p-5 p-3 h-[200px] xl:h-[245px] lg:h-[210px] md:h-[205px] 
+        @apply flex flex-col w-full justify-between xl:px-5 px-3 h-[180px] xl:h-[210px] lg:h-[195px] md:h-[185px] text-center
     } 
     .project-details p{
         @apply xl:text-base lg:text-[16px] md:text-sm text-[14px] font-extralight
@@ -143,6 +158,20 @@
     .project-technologies-list{
         @apply flex flex-wrap gap-x-2 gap-y-2
     }
+
+    .visit-website-text{
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        transition: border-bottom-color 0.3s ease-in-out;
+    }
+
+    .project:hover .arrow{
+        animation: arrow-movement 1.5s infinite ease-in-out;
+    }
+    
+    .project:hover .visit-website-text{
+        border-bottom-color: rgba(255, 255, 255, 0.335);
+    }
+    
 
     /*Contact Section*/
     input:-webkit-autofill,
@@ -183,3 +212,4 @@
         transition: opacity 0.5s ease-in-out;
     }
 }
+
