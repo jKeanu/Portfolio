@@ -25,14 +25,14 @@ function App() {
         setTimeout(()=>{
           setLoadingDisplay('none') //Once the loading screen disappears we display none
         }, 550)
-      }, 5500) //It's 3.5s, so even if the fetching project data takes almost instantly, 
-      //the loading screen can last more than 1.5s
+      }, 5500) //It's 5.5s, so even if the fetching project data takes almost instantly, 
+      //the loading screen can last more than 5.5s
     }
   }
 
   return (
     <>
-      {/* <LoadingScreen isLoading={isLoading} loadingDisplay={loadingDisplay}/> */}
+      <LoadingScreen isLoading={isLoading} loadingDisplay={loadingDisplay}/>
       <HeroSection />
       <main className="w-full">
         <AboutMe />

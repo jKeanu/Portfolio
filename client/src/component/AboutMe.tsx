@@ -2,9 +2,9 @@ import 'aos/dist/aos.css';  // Import the CSS
 import useAOS from '../customHooks/useAOS';
 
 const AboutMe:React.FC=()=>{
-    
     useAOS()
 
+    
     return(
         <section className="about-me-section bg-[#0b0f2f]" id='about-me'>
             <h1 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">About</h1>

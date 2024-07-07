@@ -27,7 +27,7 @@ if(process.env.NODE_ENV !=='production') console.log('DATABASE ERROR: ', err)
 errorLogger.error('DB connection error', {name:err.name, message:err.message, stack:err.stack})
 });
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3005;
 
 const httpServer = server.listen(port, () => {
 console.log(`App running on port ${port}...`);

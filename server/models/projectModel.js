@@ -11,20 +11,8 @@ const projectSchema = new mongoose.Schema({
         required:true,
         unique: true
     },
-    startDate:{
-        type:Date,
-        required: true
-    },
-    endDate:{
-        type:Date,
-        required: true
-    },
-    icon:{
+    photo:{
         type: String,
-        required: true
-    },
-    photos:{
-        type:[String],
         required: true
     },
     technologies:{
@@ -35,10 +23,6 @@ const projectSchema = new mongoose.Schema({
         type:String,
         required:true,
         maxLength: [135, 'Description cannot be longer than 135 characters.']
-    },
-    moreDescription:{
-        type:String,
-        required:true
     }
 })
 
