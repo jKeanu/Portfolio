@@ -1,10 +1,10 @@
-import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url';
-import dotenv from 'dotenv'
+import 'dotenv/config.js'
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
-dotenv.config({ path: path.join(__dirname, './config.env') });
+// Load environment variables from config.env file
+import express from 'express'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import cors from 'cors'
@@ -13,16 +13,16 @@ import xss from 'xss-clean';
 import compression from 'compression';
 import projectRouter from './routes/projectRoutes.js'
 import contactRouter from './routes/contactRoutes.js'
+import globalHandleError from './controllers/errorController.js';
+
 
 const app = express();
-
 
 app.set('trust proxy', 1)
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
-
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -69,6 +69,7 @@ app.use(compression());
 app.use('/my/projects', projectRouter)
 app.use('/contact', contactRouter)
 
+app.use(globalHandleError)
 
 
 export default app;

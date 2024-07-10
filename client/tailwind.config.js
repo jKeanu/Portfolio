@@ -12,8 +12,8 @@ export default {
   theme: {
     extend: {
       screens:{
-        xsm: '400px',
-        xxxl: '1800px'
+        msm:'470px',
+        xsm: '400px'
       },
       backgroundImage:{
         'hero-background': "url('/img/space-background.jpg')"
@@ -32,11 +32,20 @@ export default {
             opacity: '1',
             transform: 'translateY(0)'
           }
+        },
+        fade:{
+          '0%':{
+            opacity: '0',
+          },
+          '100%':{
+            opacity: '1',
+          }
         }
       },
       animation: {
-        fadeInUp: 'fadeInUp 0.8s ease-out forwards',
-        fadeInUp1500: 'fadeInUp 3s ease-out forwards'
+        fadeInUp: 'fadeInUp 1.6s ease-out forwards',
+        fade1s: 'fade 1s ease-in-out forwards',
+        fade2s: 'fade 2s ease-in-out forwards'
       },
       fontFamily:{
         'raleway': ['Raleway', 'sans-serif']

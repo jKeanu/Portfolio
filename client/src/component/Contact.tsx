@@ -79,7 +79,7 @@ const Contact:React.FC=()=>{
     }
 
     return (
-        <section className="contact-section bg-[#090e22] flex flex-col h-fit" id="contact">
+        <section className="contact-section bg-[#090e22] flex flex-col h-fit overflow-x-hidden" id="contact">
             <h1 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Contact</h1>
                 <p className="w-[250px] md:w-[470px] text-center text-base font-light mx-auto text-[#b4b7c3ab]" data-aos="fade-left">
                     Do you have something in mind or just want to say hello? Feel free to send me a message!

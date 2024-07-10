@@ -1,14 +1,7 @@
 import mongoose from 'mongoose'
 import http from 'http'
 import app from './app.js'
-import { fileURLToPath } from 'url';
-import path from 'path';
-import dotenv from 'dotenv'
 import  errorLogger  from './utils/cloudwatch.js';
-
-const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
-const __dirname = path.dirname(__filename); // get the name of the directory
-dotenv.config({ path: path.join(__dirname, 'config.env') });
 
 const server = http.createServer(app);
 
