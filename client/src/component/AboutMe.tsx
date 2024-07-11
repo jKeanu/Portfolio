@@ -17,8 +17,9 @@ const AboutMe:React.FC=()=>{
                     <div className="my-info-container flex justify-center items-center flex-col gap-y-6" data-aos="fade-zoom-in" data-aos-delay="150">
                         <h3 className='font-raleway font-bold text-default lg:text-2xl text-lg text-start w-[100%]' data-aos="fade-right" data-aos-delay="150">Get to know me!</h3>
                         <p className="xl:text-2xl text-xl lg:max-w-[35rem] xl:max-w-none xl:w-[40rem] 2xl:w-[60rem] xxxl:w-[75rem] font-raleway text-wrap">
-                            Hi there! I'm John, a passionate full-stack developer with a love for crafting engaging and user-friendly web experiences. With 2 years 
-                            of experience in the tech industry, I've honed my skills in both front-end and back-end development to create seamless, robust applications.
+                            My name is John, A full-stack web-developer with a strong foundation in the MERN stack and a wide range of other technologies.
+                            With a solid grounding in both front-end and back-end technologies, I enjoy the challenge of bringing ideas and curiosities come to life 
+                            through coding.
                         </p>
                     </div>
                 </div>  
