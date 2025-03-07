@@ -7,8 +7,7 @@ import { useEffect, useState } from "react";
 import LoadingScreen from "../component/LoadingScreen";
 import axios, { AxiosResponse } from "axios";
 import { ProjectDetails } from "../types/types";
-
-export const API_URL = import.meta.env.MODE === 'production'? import.meta.env.VITE_API_URL_PROD : import.meta.env.VITE_API_URL_DEV;
+import { API_URL } from "../constants/apiService";
 
 const Page = ()=>{
     const [isLoading, setIsLoading] = useState(true)

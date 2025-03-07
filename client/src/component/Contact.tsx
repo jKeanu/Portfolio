@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import useAOS from "../customHooks/useAOS"
 import axios, { AxiosResponse } from "axios"
 import MessageStatus from "./messageStatus"
-import { API_URL } from "./Project"
+import { API_URL } from "../constants/apiService"
 
 const Contact:React.FC=()=>{
     const [formData, setFormData] = useState({name:"", email:"", message:""})
@@ -14,7 +14,6 @@ const Contact:React.FC=()=>{
 
     useAOS()
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLTextAreaElement>)=>{
-        e.preventDefault()
         const {name, value} = e.target
         setFormData(prevFormData=>{
             return {
@@ -80,7 +79,7 @@ const Contact:React.FC=()=>{
 
     return (
         <section className="contact-section bg-[#090e22] flex flex-col h-fit overflow-x-hidden" id="contact">
-            <h1 className="font-bold font-raleway text-center text-3xl lg:text-4xl" data-aos="fade-right">Contact</h1>
+            <h2 className="" data-aos="fade-right">Contact</h2>
                 <p className="w-[250px] md:w-[470px] text-center text-base font-light mx-auto text-[#b4b7c3ab]" data-aos="fade-left">
                     Do you have something in mind or just want to say hello? Feel free to send me a message!
                 </p>

@@ -4,5 +4,6 @@ export type ProjectDetails={
     photo:string,
     technologies: string[],
     description: string,
-    projectLink: string
+    projectLink: string,
+    status: string
 }

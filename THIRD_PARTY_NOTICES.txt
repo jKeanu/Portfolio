@@ -59,6 +59,7 @@ For the full terms and conditions, refer to the license text provided under Link
 
 ------------------------------------------------------------------
 
+### Component: Loading Screen Loading Animation
 - Source: https://codepen.io/munjewar/pen/robENQ
 - Author: Samir Munjewar
 - Copyright: Copyright - 2024 Samir Munjewar 

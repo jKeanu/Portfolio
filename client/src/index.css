@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-
+@import './general.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,8 +10,8 @@
     section{
         @apply px-7 lg:px-24 md:px-16 xsm:px-12 min-h-[100vh]
     }
-    h1{
-        @apply pt-20 mb-5
+    h2{
+        @apply pt-20 mb-5 font-bold font-raleway text-center text-3xl lg:text-4xl
     }
     h3{
         @apply  lg:text-[14px] text-[13px] text-start
@@ -62,6 +60,16 @@
             transform: scale(1);
         }
     
+    }
+    
+    /*Contact Section*/
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Slow transition for background and text color */
+        -webkit-text-fill-color: #b3b8c4 !important; /* Set your preferred text color */
+        box-shadow: 0 0 0px 1000px transparent inset; /* 'Fakes' a transparent background */
     }
 }
 
@@ -209,6 +217,9 @@
     .project-image{
         @apply w-full flex-1
     }
+    .project-image img{
+        @apply w-fit h-fit max-h-[150px] max-w-[150px]
+    }
     .project-header{
         @apply lg:text-2xl text-xl font-semibold text-center
     }
@@ -243,17 +254,6 @@
         opacity: 1;
     }
     
-
-    /*Contact Section*/
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover, 
-    input:-webkit-autofill:focus, 
-    input:-webkit-autofill:active {
-        transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Slow transition for background and text color */
-        -webkit-text-fill-color: #b3b8c4 !important; /* Set your preferred text color */
-        box-shadow: 0 0 0px 1000px transparent inset; /* 'Fakes' a transparent background */
-        
-    }
 
 
     /*Footer*/
