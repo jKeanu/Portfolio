@@ -79,7 +79,7 @@ const Contact:React.FC=()=>{
 
     return (
         <section className="contact-section bg-[#090e22] flex flex-col h-fit overflow-x-hidden" id="contact">
-            <h2 className="" data-aos="fade-right">Contact</h2>
+            <h2 className="section-header" data-aos="fade-right">Contact</h2>
                 <p className="w-[250px] md:w-[470px] text-center text-base font-light mx-auto text-[#b4b7c3ab]" data-aos="fade-left">
                     Do you have something in mind or just want to say hello? Feel free to send me a message!
                 </p>
@@ -110,7 +110,8 @@ const Contact:React.FC=()=>{
                 </div>
                 <div className="w-full mt-14 flex items-center justify-center">
                 <button className="padding-x-transition relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 
-                        bg-[#24293c3b] group min-w-[185px]" disabled={isSending} style={{pointerEvents:isSending?'none':'auto', paddingLeft:isSending?'0':'', paddingRight:isSending?'0':'', justifyContent:isSending?'center':''}}>
+                        bg-[#24293c3b] group min-w-[185px]" disabled={isSending} style={{pointerEvents:isSending?'none':'auto', paddingLeft:isSending?'0':'', paddingRight:isSending?'0':'', justifyContent:isSending?'center':''}}
+                        aria-label="Send Message">
                         {!isSending?<>
                             <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-[#0c1b5675] group-hover:h-full">
                             </span>

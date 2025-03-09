@@ -1,4 +1,4 @@
-@import './general.css';
+@import './fonts.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,12 +9,6 @@
     }
     section{
         @apply px-7 lg:px-24 md:px-16 xsm:px-12 min-h-[100vh]
-    }
-    h2{
-        @apply pt-20 mb-5 font-bold font-raleway text-center text-3xl lg:text-4xl
-    }
-    h3{
-        @apply  lg:text-[14px] text-[13px] text-start
     }
     html{
         @apply scroll-smooth
@@ -179,6 +173,10 @@
         background-size: cover;
     }
     
+    /* Sections */
+    .section-header{
+        @apply pt-20 mb-5 font-bold font-raleway text-center text-3xl lg:text-4xl
+    }
     /*About Me Section*/
     .about-me-section{
         min-height: 100vh;

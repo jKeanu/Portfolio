@@ -7,7 +7,7 @@ const AboutMe:React.FC=()=>{
     
     return(
         <section className="about-me-section bg-[#0b0f2f]" id='about-me'>
-            <h2 className="" data-aos="fade-right">About</h2>
+            <h2 className="section-header" data-aos="fade-right">About</h2>
             <div className="about-me-container">
                 <div className="about-me-info-container flex justify-center lg:justify-between flex-wrap lg:flex-nowrap lg:gap-x-12 lg:gap-y-0 gap-y-10">
                     <div className="my-image-container flex-1 flex justify-center" data-aos="fade-zoom-in" data-aos-delay="150">

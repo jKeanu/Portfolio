@@ -8,7 +8,8 @@ const Footer:React.FC=()=>{
                 </p>
                 <ul className="socials-list flex gap-x-1">
                     <li>
-                        <a href="https://www.linkedin.com/in/john-keanu-anicete-990584213/" className="social-link" target="_blank">
+                        <a href="https://www.linkedin.com/in/john-keanu-anicete-990584213/" className="social-link" target="_blank"
+                        aria-label="Visit my LinkedIn profile">
                             <svg className="md:h-[50px] md:w-[50px] h-[35px] w-[35px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 
                                 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 
@@ -30,7 +31,8 @@ const Footer:React.FC=()=>{
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jKeanu" className="social-link" target="_blank">
+                        <a href="https://github.com/jKeanu" className="social-link" target="_blank"
+                        aria-label="Visit my Github profile">
                         <svg width="40px" height="40px" className="md:h-[40px] md:w-[40px] w-[30px] h-[30px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <rect width="24" height="24" fill="none"/>
                             <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,

@@ -7,7 +7,7 @@ const Projects:React.FC<{projects:ProjectDetails[]}>=({projects})=>{
 
     return (
         <section className="projects-section pb-10" id="projects">
-            <h2 className="" data-aos="fade-right">Projects</h2>
+            <h2 className="section-header" data-aos="fade-right">Projects</h2>
             <div className="project-list-container py-10">
                 <ul className="project-list">
                     {projects.length>0&&
@@ -19,15 +19,15 @@ const Projects:React.FC<{projects:ProjectDetails[]}>=({projects})=>{
                             </div>
                             <div className="project-details">
                                 <div className="flex flex-col">
-                                    <h2 className="project-header">
+                                    <h3 className="project-header">
                                         {project.name}
-                                    </h2>
+                                    </h3>
                                     <p>
                                         {project.description}
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h3>Built With</h3>
+                                    <h4 className="lg:text-[14px] text-[13px] text-start">Built With</h4>
                                     <div className="project-technologies-list">
                                         {project.technologies.map((tech, i)=>(
                                             <div key={i}>
