@@ -54,7 +54,8 @@ export default {
         base: '18px'
       },
       colors:{
-        'default': '#b3b8c4'
+        'default': '#b3b8c4',
+        'small-default': '#dbe7fa'
       }
     },
   },

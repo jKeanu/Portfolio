@@ -24,8 +24,8 @@ const Contact:React.FC=()=>{
     }
 
     useEffect(()=>{
-        let timeoutId: NodeJS.Timeout | undefined;
-        let displayId: NodeJS.Timeout | undefined;
+        let timeoutId: number | undefined;
+        let displayId: number | undefined;
         if (messageStatus.active) {
             timeoutId = setTimeout(() => {
                 setMessageStatus(prevStatus => ({
@@ -80,7 +80,7 @@ const Contact:React.FC=()=>{
     return (
         <section className="contact-section bg-[#090e22] flex flex-col h-fit overflow-x-hidden" id="contact">
             <h2 className="section-header" data-aos="fade-right">Contact</h2>
-                <p className="w-[250px] md:w-[470px] text-center text-base font-light mx-auto text-[#b4b7c3ab]" data-aos="fade-left">
+                <p className="w-[250px] md:w-[470px] text-center text-base font-light mx-auto text-small-default" data-aos="fade-left">
                     Do you have something in mind or just want to say hello? Feel free to send me a message!
                 </p>
             <form className="mt-[15px] contact-form flex flex-col items-center w-[250px] xsm:w-[300px] sm:w-[500px] md:w-[650px] lg:w-[850px] xl:[950px] sm:p-12 p-4 rounded-md mx-auto" onSubmit={handleSubmit}>

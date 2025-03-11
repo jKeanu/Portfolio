@@ -27,7 +27,7 @@ const Projects:React.FC<{projects:ProjectDetails[]}>=({projects})=>{
                                     </p>
                                 </div>
                                 <div className="made-with flex flex-col w-full">
-                                    <h4 className="lg:text-[14px] text-[13px] text-start">Built With</h4>
+                                    <h4 className="lg:text-[14px] text-[13px] text-start">Built with</h4>
                                     <div className="project-technologies-list">
                                         {project.technologies.map((tech, i)=>(
                                             <div key={i}>

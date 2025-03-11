@@ -225,7 +225,7 @@
         @apply flex flex-col w-full justify-between xl:px-5 px-3 h-[235px] xsm:h-[230px] msm:h-[200px] xl:h-[210px] lg:h-[195px] sm:h-[175px] text-center
     } 
     .project-details p{
-        @apply xl:text-base lg:text-[16px] md:text-sm text-[14px] font-extralight
+        @apply xl:text-base lg:text-[16px] md:text-sm text-[14px] font-extralight text-small-default
     }
     .project-technologies-list{
         @apply flex flex-wrap gap-x-2 gap-y-2
