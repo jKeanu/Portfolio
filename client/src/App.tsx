@@ -1,16 +1,19 @@
-import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import Page from './page/Page';
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Page />,
+  },
+  {
+    path: "*",
+    element: <Navigate replace to="/" />,
+  }]
+);
 
-  return (
-      <Router >
-        <Routes>
-          <Route path="/" element={<Page />} />
-          <Route path="*" element={<Navigate replace to="/"/>}/>
-        </Routes>
-      </Router>
-  )
+function App() {
+  return <RouterProvider router={router}/>;
 }
 
-export default App
+export default App;

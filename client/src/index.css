@@ -207,7 +207,7 @@
         @apply lg:w-[380px] lg:h-[455px] xl:w-[400px] xl:h-[520px] w-[375px] sm:h-[425px] h-[470px]
     }
     .project{
-        @apply flex h-full shadow-lg shadow-[#7184bc7d] flex-col backdrop-blur-sm hover:shadow-md hover:shadow-[#7184bc7d]
+        @apply flex h-full shadow-lg shadow-[#7184bc7d] flex-col backdrop-blur-sm hover:shadow-md hover:shadow-[#7184bc7d] will-change-transform
     }
     .project{
         transition: box-shadow 0.15s ease-in-out;
