@@ -12,7 +12,7 @@ export default {
   theme: {
     extend: {
       screens:{
-        msm:'470px',
+        msm:'480px',
         xsm: '400px'
       },
       backgroundImage:{

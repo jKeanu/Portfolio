@@ -1,7 +1,10 @@
 export type ProjectDetails={
     name:string,
     photoUrl:string,
-    photo:string,
+    logo:{
+        isSymbol:boolean,
+        photo:string
+    }
     technologies: string[],
     description: string,
     projectLink: string,

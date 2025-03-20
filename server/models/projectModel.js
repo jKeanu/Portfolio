@@ -11,13 +11,16 @@ const projectSchema = new mongoose.Schema({
         required:true,
         unique: true
     },
-    photo:{
-        type: String,
-        required: true
+    logo:{
+        required:true,
+        type:{
+            photo:String,
+            isSymbol:Boolean
+        }
     },
     technologies:{
         type: [String],
-        required: true,
+        required: Boolean,
     },
     description:{
         type:String,

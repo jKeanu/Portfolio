@@ -9,7 +9,7 @@ export const getFirstSix = catchAsync(async (req, res, next)=>{
         .limit(6)
         .lean(); // Limiting the results to the first 6 documents
     for (const project of projects){
-        project.photoUrl = `${cloudfrontDomainName}/${project.photo}`
+        project.photoUrl = `${cloudfrontDomainName}/${project.logo.photo}`
     }
     res.status(200).json({
         status:'success',
