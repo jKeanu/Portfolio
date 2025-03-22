@@ -4,7 +4,6 @@ import { ProjectDetails } from "../types/types"
 const Projects:React.FC<{projects:ProjectDetails[]}>=({projects})=>{
     useAOS()
 
-
     return (
         <section className="projects-section pb-10" id="projects">
             <h2 className="section-header" data-aos="fade-right">Projects</h2>
@@ -16,7 +15,8 @@ const Projects:React.FC<{projects:ProjectDetails[]}>=({projects})=>{
                         <a className="project cursor-pointer" href={project.projectLink} target="_blank" rel="noopener noreferrer">
                             <div className="shine"></div>
                             <div className="project-image-container flex justify-center items-center">
-                                <img className={`project-image h-[125px] ${project.logo.isSymbol?"w-[125px]":"w-[190px]"}`} 
+                                <img className={`project-image msm:h-[125px] h-[100px] 
+                                ${project.logo.isSymbol?"msm:w-[125px] w-[100px]":"msm:w-[190px] w-[152px]"}`} 
                                 src={project.photoUrl} alt={project.logo.photo}/>
                             </div>
                             <div className="project-details">
