@@ -42,7 +42,7 @@ For the full terms and conditions, refer to the license text provided under Link
 ### Component: Tailwind CSS Send Message Button Style
 - Source: https://uiverse.io/Jules-gitclerc/slimy-mouse-94
 - Author: Surfy
-- Copyright: 2024 Jules-gitclerc (Surfy)
+- Copyright: 2025 Jules-gitclerc (Surfy)
 - License: MIT
 
 For the full terms and conditions, refer to the license text provided under LinkedIn Icon.
@@ -52,7 +52,7 @@ For the full terms and conditions, refer to the license text provided under Link
 ### Component: Tailwind CSS Hero Anchor Style
 - Source: https://uiverse.io/yuuzuk/fat-owl-93
 - Author: yuuzuki
-- Copyright: Copyright - 2024 yuuzuk (Yuzuk.) 
+- Copyright: Copyright - 2025 yuuzuk (Yuzuk.) 
 - License: MIT
 
 For the full terms and conditions, refer to the license text provided under LinkedIn Icon.
@@ -62,7 +62,7 @@ For the full terms and conditions, refer to the license text provided under Link
 ### Component: Loading Screen Loading Animation
 - Source: https://codepen.io/munjewar/pen/robENQ
 - Author: Samir Munjewar
-- Copyright: Copyright - 2024 Samir Munjewar 
+- Copyright: Copyright - 2025 Samir Munjewar 
 - License: MIT
 
 For the full terms and conditions, refer to the license text provided under LinkedIn Icon.

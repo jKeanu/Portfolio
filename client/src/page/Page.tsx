@@ -6,13 +6,13 @@ import Footer from "../component/Footer";
 import { useEffect, useState } from "react";
 import LoadingScreen from "../component/LoadingScreen";
 import axios, { AxiosResponse } from "axios";
-import { ProjectDetails } from "../types/types";
+import { ProjectType } from "../types/types";
 import { API_URL } from "../constants/apiService";
 
 const Page = ()=>{
     const [isLoading, setIsLoading] = useState(true)
     const [loadingDisplay, setLoadingDisplay] = useState('block')
-    const [projects, setProjects] = useState<ProjectDetails[]>([])
+    const [projects, setProjects] = useState<ProjectType[]>([])
     
   
     const handleLoadScreen = (isFetching:boolean):void=>{
@@ -31,9 +31,9 @@ const Page = ()=>{
     useEffect(()=>{
       const fetchLatestProjects = async ()=>{
           try{
-              const res:AxiosResponse<{status:string, data:ProjectDetails[]}> = await axios.get(`${API_URL}/my/projects/latest`)
+              const res:AxiosResponse<{status:string, projects:ProjectType[]}> = await axios.get(`${API_URL}/my/projects/latest`)
               if(res.data.status==='success'){
-                  setProjects(res.data.data)
+                  setProjects(res.data.projects)
                   handleLoadScreen(false)
               }
           }catch(err){

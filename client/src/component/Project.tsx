@@ -1,7 +1,7 @@
 import useAOS from "../customHooks/useAOS"
-import { ProjectDetails } from "../types/types"
+import { ProjectStatus, ProjectType } from "../types/types"
 
-const Projects:React.FC<{projects:ProjectDetails[]}>=({projects})=>{
+const Projects:React.FC<{projects:ProjectType[]}>=({projects})=>{
     useAOS()
 
     return (
@@ -12,7 +12,10 @@ const Projects:React.FC<{projects:ProjectDetails[]}>=({projects})=>{
                     {projects.length>0&&
                     projects.map((project, i)=>(
                     <li className="project-container" key={i}>
-                        <a className="project cursor-pointer" href={project.projectLink} target="_blank" rel="noopener noreferrer">
+                        <a className={`project ${project.status === ProjectStatus.DEPLOYED? 'cursor-pointer':'cursor-default'}`}
+                        onClick={project.status !== ProjectStatus.DEPLOYED ? (e) => e.preventDefault() : undefined}
+                        href={project.status === ProjectStatus.DEPLOYED?project.projectLink:undefined} 
+                        target="_blank" rel="noopener noreferrer">
                             <div className="shine"></div>
                             <div className="project-image-container flex justify-center items-center">
                                 <img className={`project-image msm:h-[125px] h-[100px] 
@@ -40,17 +43,20 @@ const Projects:React.FC<{projects:ProjectDetails[]}>=({projects})=>{
                                 </div>
                             </div>
                             <div className="visit-website-container flex items-center justify-center px-3 
-                                py-2 gap-x-[4px] shrink-0">
-                                <span className="visit-website-text text-end font-light text-[16px] text-small-default">
-                                    {project.status==="deployed"?"Visit Website":"Visit Repository"}
+                                py-2 gap-x-[3px] shrink-0">
+                                <span className="text-end font-light text-[16px] text-small-default">
+                                    {project.status===ProjectStatus.DEPLOYED?"Visit Website":"Work in Progress"}
                                 </span>
-                                <div className="text-[12px]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" 
-                                stroke="#b3b8c4" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" 
-                                className=""><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6">
-                                    </path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+                                {
+                                    project.status===ProjectStatus.DEPLOYED&&
+                                <div className="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 28" fill="none" 
+                                        stroke="#b3b8c4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" 
+                                        className=""><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6">
+                                        </path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
                                     </svg>
                                 </div>
+                                }
                             </div>
                         </a>
                     </li>

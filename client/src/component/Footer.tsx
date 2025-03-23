@@ -4,7 +4,7 @@ const Footer:React.FC=()=>{
             <div className="mt-auto w-full border-t-[1px] border-b-0 border-r-0 border-l-0 border-solid border-[#444c68c3] py-6
                 flex justify-between items-center gap-x-2">
                 <p className="lg:text-base sm:text-[14px] text-[13px]">
-                    &copy; 2024 John Keanu Anicete
+                    &copy; 2025 John Keanu Anicete
                 </p>
                 <ul className="socials-list flex gap-x-1">
                     <li>

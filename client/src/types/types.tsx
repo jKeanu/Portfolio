@@ -1,3 +1,8 @@
+export enum ProjectStatus{
+    DEPLOYED = "deployed",
+    INPROGRESS= "inProgress"
+}
+
 export type ProjectDetails={
     name:string,
     photoUrl:string,
@@ -7,6 +12,16 @@ export type ProjectDetails={
     }
     technologies: string[],
     description: string,
-    projectLink: string,
     status: string
 }
+
+type DeployedProject = ProjectDetails & {
+    status:ProjectStatus.DEPLOYED,
+    projectLink: string
+}
+
+type InProgressProject = ProjectDetails & {
+    status: ProjectStatus.INPROGRESS
+}
+
+export type ProjectType = DeployedProject | InProgressProject
