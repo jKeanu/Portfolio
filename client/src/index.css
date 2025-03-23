@@ -242,7 +242,6 @@
         position: absolute;
         top: -15%;
         right: 120%;
-        width: 90%;
         height: 70%;
         background: linear-gradient(280deg, transparent, rgba(182, 206, 248, 0.3), transparent);
         transform: skewX(-60deg);

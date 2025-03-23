@@ -16,7 +16,7 @@ const Projects:React.FC<{projects:ProjectType[]}>=({projects})=>{
                         onClick={project.status !== ProjectStatus.DEPLOYED ? (e) => e.preventDefault() : undefined}
                         href={project.status === ProjectStatus.DEPLOYED?project.projectLink:undefined} 
                         target="_blank" rel="noopener noreferrer">
-                            <div className="shine"></div>
+                            <div className="shine msm:w-[90%] w-[115%]"></div>
                             <div className="project-image-container flex justify-center items-center">
                                 <img className={`project-image msm:h-[125px] h-[100px] 
                                 ${project.logo.isSymbol?"msm:w-[125px] w-[100px]":"msm:w-[190px] w-[152px]"}`} 
