@@ -22,8 +22,8 @@ const Page = ()=>{
           setTimeout(()=>{
             setLoadingDisplay('none') //Once the loading screen disappears we display none
           }, 550)
-        }, 1500) //It's 5.5s, so even if the fetching project data takes almost instantly, 
-        //the loading screen can last more than 5.5s
+        }, 1500) //It's 1.5s, so even if the fetching project data takes almost instantly, 
+        //the loading screen last 1.5s at least.
       }
   }
   

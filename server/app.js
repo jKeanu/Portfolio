@@ -9,7 +9,6 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 import cors from 'cors'
 import mongoSanitize from 'express-mongo-sanitize';
-import xss from 'xss-clean';
 import compression from 'compression';
 import projectRouter from './routes/projectRoutes.js'
 import contactRouter from './routes/contactRoutes.js'
@@ -62,8 +61,6 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 // Data sanitization against NoSQL query
 app.use(mongoSanitize());
 
-// Data sanitization against XSS
-app.use(xss());
 app.use(compression());
 
 app.use('/my/projects', projectRouter)
