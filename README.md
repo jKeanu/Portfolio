@@ -1,8 +1,5 @@
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/6bf016b7-a022-4de1-ada1-8aaac654924b"/>
-</div
-  
----
+![portfolio_readme_image](https://github.com/user-attachments/assets/c1ee44b1-8948-44d0-936f-7f8f5ac11d9f)
+
 # Portfolio - John Keanu Anicete
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
