@@ -24,8 +24,8 @@ const Contact:React.FC=()=>{
     }
 
     useEffect(()=>{
-        let timeoutId: number | undefined;
-        let displayId: number | undefined;
+        let timeoutId: ReturnType<typeof setTimeout>;
+        let displayId: ReturnType<typeof setTimeout>;
         if (messageStatus.active) {
             timeoutId = setTimeout(() => {
                 setMessageStatus(prevStatus => ({
