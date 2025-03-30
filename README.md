@@ -1,4 +1,4 @@
-![portfolio_readme_image](https://github.com/user-attachments/assets/c1ee44b1-8948-44d0-936f-7f8f5ac11d9f)
+[![portfolio_readme_image](https://github.com/user-attachments/assets/7309bc1e-0599-45d4-81f8-28a1c50f2ddd)](https://johnkeanu.com)
 
 # Portfolio - John Keanu Anicete
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -24,7 +24,7 @@ A responsive portfolio website showcasing my full-stack projects, technical skil
 
 ## 🚀 Quick Start
 ### Prerequisites
-- Node.js (v18+)  
+- Node.js (v20+)  
 - MongoDB Atlas  
 - AWS Account (for S3/CloudFront/CloudWatch)  
 - SMTP/Mailjet for emails
