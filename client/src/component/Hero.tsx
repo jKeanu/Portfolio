@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
-import useAOS from "../customHooks/useAOS";
-const HeroSection: React.FC<{ isLoading: boolean }> = ({ isLoading }) => {
-  const [isSticky, setIsSticky] = useState(false);
 
-  useAOS();
-  // this should be run only once per application lifetime
+const HeroSection: React.FC<{ isLoading: boolean }> = ({ isLoading }) => {
+  const [isSticky, setIsSticky] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
