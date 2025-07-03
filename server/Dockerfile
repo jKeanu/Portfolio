@@ -12,7 +12,7 @@ COPY . .
 # Development stage: runs dev server
 FROM base AS development
 
-EXPOSE 3001
+EXPOSE 3005
 CMD ["npm", "run", "dev"]
 
 
