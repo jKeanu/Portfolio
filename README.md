@@ -46,3 +46,18 @@ cd client && npm install && npm run dev
 
 # Backend (in new terminal)
 cd server && npm install && npm run dev
+```
+
+## 🐳 Running with Docker
+
+### Prerequisites
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+### 📦 Development
+```bash
+npm run docker:dev
+```
+This will:
+- Run the Vite + React frontend at [http://localhost:5173](http://localhost:5173)
+- Run the Express + Socket.IO backend at [http://localhost:3001](http://localhost:3001)
