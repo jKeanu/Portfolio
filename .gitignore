@@ -5,7 +5,14 @@ node_modules/
 /client/node_modules/
 
 # Ignore .env files in the client directory
-/client/*.env
+/client/.env*
+
+# But keep .env.example and .env.production.example
+!/client/.env.example
+!/client/.env.production.example
+
+# Ignore dist folder
+/client/dist
 
 # Ignore node_modules in the server directory
 /server/node_modules/

@@ -38,7 +38,6 @@ export default defineConfig(({ mode }) => ({
 
   server: {
     strictPort: true,
-    open: true,
     cors: true, // Allow cross-origin requests
   },
 

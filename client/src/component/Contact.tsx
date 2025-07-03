@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useAOS from "../customHooks/useAOS";
 import axios, { AxiosResponse } from "axios";
 import MessageStatus from "./messageStatus";
-import { API_URL } from "../constants/apiService";
+import { API_URL } from "../constants/API_URL";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({

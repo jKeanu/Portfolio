@@ -1,0 +1,12 @@
+services:
+  client:
+    build:
+      target: production
+    ports:
+      - "4173:4173"
+    command: serve -s dist -l 4173
+
+  server:
+    build:
+      target: production
+    command: npm start

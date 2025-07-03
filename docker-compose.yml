@@ -1,0 +1,25 @@
+services:
+  client:
+    build:
+      # directory where Docker starts the build process.
+      context: ./client
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    # Only works at runtime, in which won't work in production since,
+    # we are using vite, and vite reads VITE_env vars at build time (prod).
+    env_file:
+      - ./client/.env
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: ./server
+    ports:
+      - "3005:3005"  # Host:Container (Express)
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    env_file:
+      - ./server/.env

@@ -1,0 +1,21 @@
+services:
+  client:
+    build:
+      target: development
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    command: npm run dev -- --host
+
+  server:
+    build:
+      target: development
+    volumes:
+      - ./server:/app
+      # Prevent local node_modules from overwriting the container’s node_modules
+      # Without this line, the ./server:/app mapping would override everything in /app, 
+      # including node_modules installed by Docker
+      - /app/node_modules
+    command: npm run dev

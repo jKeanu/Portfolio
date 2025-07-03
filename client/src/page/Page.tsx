@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import LoadingScreen from "../component/LoadingScreen";
 import axios, { AxiosResponse } from "axios";
 import { ProjectType } from "../types/types";
-import { API_URL } from "../constants/apiService";
+import { API_URL } from "../constants/API_URL";
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
