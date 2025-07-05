@@ -4,11 +4,5 @@ node_modules
 # Ignore dist folder
 dist
 
-# Ignore .env
-.env
-
-# We don't include this because we're using vite; in production env variables
-# is only accessible during build time. 
-# NOTE: If there are env var that includes secrets, keys, etc... this is not
-# a recommended approach, since we only have public config this is safe.
-!.env.production
+# Exclude all env files by default including examples
+.env*
