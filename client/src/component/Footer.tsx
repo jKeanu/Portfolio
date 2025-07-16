@@ -1,30 +1,30 @@
 const Footer: React.FC = () => {
-  return (
-    <footer className="w-full h-fit bg-[#090e22] sm:px-14  xl:px-80 flex flex-col px-7 lg:px-24 md:px-16 xsm:px-12">
-      <div
-        className="mt-auto w-full border-t-[1px] border-b-0 border-r-0 border-l-0 border-solid border-[#444c68c3] py-6
+    return (
+        <footer className="w-full h-fit bg-[#090e22] sm:px-14  xl:px-80 flex flex-col px-7 lg:px-24 md:px-16 xsm:px-12">
+            <div
+                className="mt-auto w-full border-t-[1px] border-b-0 border-r-0 border-l-0 border-solid border-[#444c68c3] py-6
                 flex justify-between items-center gap-x-2"
-      >
-        <p className="lg:text-base sm:text-[14px] text-[13px]">
-          &copy; 2025 John Keanu Anicete
-        </p>
-        <ul className="socials-list flex gap-x-1">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/john-keanu-anicete-990584213/"
-              className="social-link"
-              target="_blank"
-              aria-label="Visit my LinkedIn profile"
-              rel="noreferrer"
             >
-              <svg
-                className="md:h-[50px] md:w-[50px] h-[35px] w-[35px]"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 
+                <p className="lg:text-base sm:text-[14px] text-[13px]">
+                    &copy; 2025 John Keanu Anicete
+                </p>
+                <ul className="socials-list flex gap-x-1">
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/john-keanu-anicete-990584213/"
+                            className="social-link"
+                            target="_blank"
+                            aria-label="Visit my LinkedIn profile"
+                            rel="noreferrer"
+                        >
+                            <svg
+                                className="md:h-[50px] md:w-[50px] h-[35px] w-[35px]"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 
                                 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 
                                 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 
                                 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 
@@ -39,42 +39,42 @@ const Footer: React.FC = () => {
                                 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 
                                 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 
                                 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z"
-                  fill="#ffffff"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/jKeanu"
-              className="social-link"
-              target="_blank"
-              aria-label="Visit my Github profile"
-              rel="noreferrer"
-            >
-              <svg
-                width="40px"
-                height="40px"
-                className="md:h-[40px] md:w-[40px] w-[30px] h-[30px]"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="24" height="24" fill="none" />
-                <path
-                  d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,
+                                    fill="#ffffff"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/jKeanu"
+                            className="social-link"
+                            target="_blank"
+                            aria-label="Visit my Github profile"
+                            rel="noreferrer"
+                        >
+                            <svg
+                                width="40px"
+                                height="40px"
+                                className="md:h-[40px] md:w-[40px] w-[30px] h-[30px]"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect width="24" height="24" fill="none" />
+                                <path
+                                    d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,
                             5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,
                             16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,
                             0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,
                             1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"
-                  fill="#ffffff"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-  );
+                                    fill="#ffffff"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;

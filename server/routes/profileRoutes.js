@@ -1,15 +1,15 @@
 import express from 'express';
 import rateLimit from 'express-rate-limit';
-import {getFirstSix} from '../controllers/projectController.js';
+import { getMyInfo } from '../controllers/profileController.js';
 
 const router = express.Router();
 
-const fetchProjectsLimiter = rateLimit({
+const fetchMyInfoLimiter = rateLimit({
   limit: 50,
   windowMs: 60 * 1000 * 60 * 6,
   message: 'Too many requests, please try again later.',
 });
 
-router.get('/latest', fetchProjectsLimiter, getFirstSix);
+router.get('/', fetchMyInfoLimiter, getMyInfo);
 
 export default router;

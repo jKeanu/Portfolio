@@ -10,6 +10,7 @@ import mongoSanitize from 'express-mongo-sanitize';
 import compression from 'compression';
 import projectRouter from './routes/projectRoutes.js';
 import contactRouter from './routes/contactRoutes.js';
+import profileRouter from './routes/profileRoutes.js'
 import globalHandleError from './controllers/errorController.js';
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
@@ -68,6 +69,7 @@ app.use(mongoSanitize());
 
 app.use(compression());
 
+app.use('/my/info', profileRouter)
 app.use('/my/projects', projectRouter);
 app.use('/contact', contactRouter);
 
