@@ -1,5 +1,5 @@
 import useAOS from '../hooks/useAOS';
-import { ProjectStatus, ProjectType } from '../types/projectTypes.d.ts';
+import { ProjectStatus, ProjectType } from '../types/projectTypes';
 
 const Projects: React.FC<{ projects: ProjectType[] }> = ({ projects }) => {
     useAOS();

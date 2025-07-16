@@ -4,13 +4,6 @@ import path from 'path';
 
 export default defineConfig(({ mode }) => ({
     plugins: [react()],
-
-    resolve: {
-        alias: {
-            '@': path.resolve(__dirname, 'src'), // Shorter import paths
-        },
-    },
-
     build: {
         target: 'esnext', // Optimize for modern browsers
         outDir: 'dist',
