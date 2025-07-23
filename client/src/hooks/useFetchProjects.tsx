@@ -13,7 +13,6 @@ const useFetchProjects = () => {
                 const res: AxiosResponse<{ status: string; projects: ProjectType[] }> =
                     await axios.get(`${API_URL}/my/projects/latest`);
                 if (res.data.status === 'success') {
-                    console.log(res.data.projects, '======')
                     setProjects(res.data.projects);
                 }
             } catch (_err) {

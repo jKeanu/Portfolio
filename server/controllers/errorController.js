@@ -19,7 +19,7 @@ const sendErrorProd = (err, req, res) => {
   // during those operations it can only mean server/configuration error.
   return res.status(500).json({
     status: 'error',
-    message: 'Something went very wrong',
+    message: 'Something went very wrong.',
   });
 };
 
